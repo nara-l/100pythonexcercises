@@ -1,7 +1,8 @@
 import glob
-letter_list = []
 
-for filename in glob.glob("files/*.txt"):
+letter_list = []
+list_of_files = glob.iglob("files/*.txt")
+for filename in list_of_files:
     with open(filename, 'r') as file:
         letter = file.read()
         letter_list.append(letter)
