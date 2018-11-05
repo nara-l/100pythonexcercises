@@ -8,6 +8,8 @@ d = {"employees":[{"firstName": "John", "lastName": "Doe"},
 
 with open('company.json', 'w') as file:
 
-    file.write(json.dumps(d))
+    #json.dump(d, file, indent=4, sort_keys=True)
+
+    file.write(json.dumps(d, indent=4, sort_keys=True))
 
 
